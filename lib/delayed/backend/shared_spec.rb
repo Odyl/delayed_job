@@ -226,7 +226,7 @@ shared_examples_for 'a delayed_job backend' do
       jobs = described_class.find_available('worker', 10)
       jobs.size.should == 10
       jobs.each_cons(2) do |a, b|
-        a.priority.should <= b.priority
+        a.priority.should >= b.priority
       end
     end
 
