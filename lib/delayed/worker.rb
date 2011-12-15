@@ -3,6 +3,7 @@ require 'active_support/core_ext/numeric/time'
 require 'active_support/core_ext/class/attribute_accessors'
 require 'active_support/core_ext/kernel'
 require 'logger'
+require 'benchmark'
 
 module Delayed
   class Worker
