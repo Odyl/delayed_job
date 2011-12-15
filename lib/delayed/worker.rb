@@ -78,7 +78,7 @@ module Delayed
           result = work_off
         end
 
-        count = result.sum
+        count = result.inject(:+)
 
         break if $exit
 
